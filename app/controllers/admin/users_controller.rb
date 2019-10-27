@@ -1,8 +1,8 @@
 class Admin::UsersController < ApplicationController
 skip_before_action  :login_required, only: [:new, :create]#仮
-before_action :require_admin, only: :index, :edit, :destroy
+before_action :require_admin, only: [:index, :edit, :destroy]
   def index
-    @users = User.all
+    @users = User.ali
   end
 
   def show
@@ -12,7 +12,7 @@ before_action :require_admin, only: :index, :edit, :destroy
   def new
     @user = User.new
   end
-
+  
   def edit
     @user = User.find(params[:id])
   end
@@ -50,4 +50,5 @@ before_action :require_admin, only: :index, :edit, :destroy
     def require_admin
       redirect_to root_url unless current_user&.admin?
     end
+
 end

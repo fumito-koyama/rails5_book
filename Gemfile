@@ -7,6 +7,9 @@ gem 'slim-rails'
 gem 'html2slim'
 gem 'bootstrap'
 gem 'rails_autolink'
+gem 'ransack'
+gem 'kaminari'
+gem 'sidekiq'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
