@@ -54,7 +54,8 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
-    head :no_content
+    #head :no_content
+    #SJRを用いるため不要
   end
 
   def import
